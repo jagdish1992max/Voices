@@ -6,7 +6,7 @@ const app=express()
 app.use(express.json())
 app.use(express.static(__dirname))
 
-const sk_502d0de909318e28059e54d15c6b8f9be3e9b4b3e82c9435"
+const API_KEY = process.env.ELEVEN_API_KEY"
 
 app.post("/generate",async(req,res)=>{
 
