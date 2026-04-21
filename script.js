@@ -1,17 +1,17 @@
 async function generate(){
 
-const text=document.getElementById("text").value
+const text = document.getElementById("text").value
 
-const res=await fetch("/api/generate",{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
+const res = await fetch("/api/generate", {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
 },
-body:JSON.stringify({text})
+body: JSON.stringify({ text: text })
 })
 
-const blob=await res.blob()
+const blob = await res.blob()
 
-document.getElementById("audio").src=URL.createObjectURL(blob)
+document.getElementById("audio").src = URL.createObjectURL(blob)
 
 }
